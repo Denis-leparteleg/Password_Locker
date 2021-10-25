@@ -45,3 +45,10 @@ class TestCredentials(unittest.TestCase):
     '''
     it will create the TestCredentials subclass.
     '''
+    def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_credentials = Credentials(
+            "twitter", "104788W@ve", "DenisLeparteleg")
+        
