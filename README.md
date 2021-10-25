@@ -22,13 +22,11 @@ This is a command-line-based interface that will help us manage our passwords an
         <td>Store their already existing account credentials in the application</td>
         <td>Twitter</td>
         <td>DenisLeparteleg</td>
-        <td>pass@1234</td>
         </tr>
         <tr>
         <td>Create new account credentials in the application</td>
         <td>Instagram</td>
         <td>DenisLeparteleg</td>
-        <td>pass@123</td>
         </tr>
 </table>
       
