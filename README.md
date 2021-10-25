@@ -60,8 +60,8 @@ To be able to run this command-line interface, you will need  to install the fol
 * pyperclip
 * To run the application, in your terminal:
 
-        $ chmod +x Password_Locker.py
-        $ ./Password_Locker.py
+        $ chmod +x credentials.py
+        $ ./credentials.py
 
 ## Technologies Used
 * [Python](https://github.com/topics/python)
