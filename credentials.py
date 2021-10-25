@@ -1,4 +1,4 @@
-
+import pyperclip
 
 
 class User:
@@ -55,3 +55,35 @@ class Credentials:
         delete_credentials method  that deletes a saved credentials from the credentials_list
         '''
         Credentials.credentials_list.remove(self)
+        
+    @classmethod
+    def find_by_password(cls, password):
+        '''
+        Method that takes in a password and returns a credential that matches that password.
+        Args:
+            password: password to search for
+        Returns :
+            Credentials of person that matches the password.
+        '''
+        
+    @classmethod
+    def credentials_exist(cls, password):
+        '''
+        Method that checks if a credentials exists from the contact list.
+        Args:
+            password: password to search if it exists
+        Returns :
+            Boolean: True or false depending if the credentials exists
+        '''
+        for credentials in cls.credentials_list:
+            if credentials.password == password:
+                return True
+
+        return False
+    
+    @classmethod
+    def display_all_credentials(cls):
+        '''
+        method that returns the credentials list
+        '''
+        return cls.credentials_list
