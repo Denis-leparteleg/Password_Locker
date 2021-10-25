@@ -40,3 +40,8 @@ class TestUser(unittest.TestCase):
         '''
         delete_user test case to test if the object is deleted in the user_list
         '''
+        
+class TestCredentials(unittest.TestCase):
+    '''
+    it will create the TestCredentials subclass.
+    '''
