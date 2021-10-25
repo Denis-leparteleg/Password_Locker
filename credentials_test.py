@@ -82,3 +82,12 @@ class TestCredentials(unittest.TestCase):
         test_credentials = Credentials(
             "twitter", "104788W@ve", "DenisLeparteleg")  
         test_credentials.save_credentials()
+        
+    def test_find_credentials_by_password(self):
+        '''
+        test_find_credentials test case to test if we can find credentials details by password in the credentials_list
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials(
+            "twitter", "104788W@ve", "DenisLeparteleg")  
+        test_credentials.save_credentials()
