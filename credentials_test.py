@@ -91,3 +91,24 @@ class TestCredentials(unittest.TestCase):
         test_credentials = Credentials(
             "twitter", "104788W@ve", "DenisLeparteleg")  
         test_credentials.save_credentials()
+        
+    def test_credentials_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the credentials.
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials(
+            "twitter", "104788W@ve", "DenisLeparteleg") 
+        test_credentials.save_credentials()
+
+        credentials_exists = Credentials.credentials_exist("104788W@ve")
+
+        self.assertTrue(credentials_exists)
+        
+    def test_display_all_credentials(self):
+        '''
+        test to display all credentials.
+        '''
+        self.assertEqual(Credentials.display_all_credentials(),Credentials.credentials_list)
+    
+    
