@@ -20,3 +20,10 @@ class User:
         '''
         save_user method saves user objects into user_list
         '''
+        
+    def delete_user(self):
+        '''
+        delete_user method deletes a saved credentials from the credentials_list
+        '''
+
+        User.user_list.remove(self)
