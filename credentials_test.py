@@ -73,3 +73,12 @@ class TestCredentials(unittest.TestCase):
         tearDown method that does clean up after each test case has run.
         '''
         Credentials.credentials_list = []
+        
+    def test_delete_credentials(self):
+        '''
+        test_delete_credentials test case to test if the credentials details are deleted in the credentials_list
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials(
+            "twitter", "104788W@ve", "DenisLeparteleg")  
+        test_credentials.save_credentials()
