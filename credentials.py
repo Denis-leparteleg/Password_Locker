@@ -3,8 +3,8 @@
 
 class User:
     
-    
-     def __init__(self, first_name, last_name, phone_number, email):
+    user_list = []
+    def __init__(self, first_name, last_name, phone_number, email):
     
         '''
         It will initialize new instances of the object class
