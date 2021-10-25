@@ -35,3 +35,13 @@ class Credentials:
     It will create Credentials class
     '''
     credentials_list = []
+    
+    def __init__(self, account, password, user_name):
+        '''
+        __init__ method to initialize the attributes of the class.
+        '''
+        self.account = account
+        self.password = password
+        self.user_name = user_name
+        
+    
