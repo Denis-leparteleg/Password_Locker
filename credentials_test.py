@@ -36,4 +36,7 @@ class TestUser(unittest.TestCase):
         '''
         Credentials.user_list = []
 
-    
+    def test_delete_user(self):
+        '''
+        delete_user test case to test if the object is deleted in the user_list
+        '''
