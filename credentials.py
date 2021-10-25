@@ -2,7 +2,9 @@
 
 
 class User:
-    
+    '''
+    It will create User class
+    '''
     user_list = []
     def __init__(self, first_name, last_name, phone_number, email):
     
@@ -29,4 +31,7 @@ class User:
         User.user_list.remove(self)
         
 class Credentials:
-    
+    '''
+    It will create Credentials class
+    '''
+    credentials_list = []
