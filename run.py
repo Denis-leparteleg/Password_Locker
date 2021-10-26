@@ -1,11 +1,11 @@
 #!/usr/bin/env python3.9
-from credentials import User, Credentials
+from credentials import User,Credentials
 
 def create_user(first_name, last_name, phone_number, email):
     '''
     Function to create a new user
     '''
-    new_user = user(first_name, last_name, phone_number, email)
+    new_user = User(first_name, last_name, phone_number, email)
     return new_user
 
 
@@ -13,7 +13,7 @@ def save_user(user_name):
     '''
     Function to save user
     '''
-    user.save_user()
+    User.save_user()
 
 
 def del_user(user):
@@ -27,7 +27,7 @@ def create_credentials(account, password, user_name):
     '''
     Function to create a new credentials
     '''
-    new_credentials = credentials(account, password, user_name)
+    new_credentials = Credentials(account, password, user_name)
     return new_credentials
 
 
@@ -35,14 +35,14 @@ def save_credentials(credentials):
     '''
     Function to save credentials
     '''
-    credentials.save_credentials()
+    Credentials.save_credentials(credentials)
 
 
 def del_credentials(credentials):
     '''
     Function to delete a credentials
     '''
-    credentials.delete_credentials()
+    Credentials.delete_credentials()
 
 
 def find_credentials(credentials):
@@ -51,7 +51,9 @@ def find_credentials(credentials):
     '''
     return credentials.find_by_password(password)
 
-
+def display_all_credentials (credentials):
+    return Credentials.display_all_credentials(credentials)
+    
 def check_existing_email(password):
     '''
     Function that check if a email exists with that password and return a Boolean
@@ -86,20 +88,19 @@ def main():
             print("Email address ...")
             e_address = input()
 
-            #     save_credentials(create_credentials(f_name,l_name,password,e_address)) # create and save new credentials.
             print('\n')
             print(f"New password {f_name} {l_name} created")
             print('\n')
-
+        
         elif short_code == 'dc':
 
-            if display_credentials():
+            if display_all_credentials(credentials):
                 print("Here is a list of all your passwords")
                 print('\n')
 
-                for credentials in _all_credentials():
+                for credentials in display_all_credentials(credentials):
                     print(
-                    f"{credentials.first_name} {credentials.last_name} .....{credentials.password}")
+                    f"{credentials.account} {credentials.password} .....{credentials.user_name}")
 
                     print('\n')
             else:

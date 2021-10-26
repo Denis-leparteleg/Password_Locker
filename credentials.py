@@ -1,4 +1,3 @@
-import pyperclip
 
 
 class User:
@@ -82,8 +81,12 @@ class Credentials:
         return False
     
     @classmethod
-    def display_all_credentials(cls):
+    def display_all_credentials(cls,credentials):
         '''
         method that returns the credentials list
         '''
-        return cls.credentials_list
+        user_credentials_list = []
+        for credential in cls.credentials_list:
+            if credential.credentials == credentials:
+                user_credentials_list.append(credential)
+        return user_credentials_list
