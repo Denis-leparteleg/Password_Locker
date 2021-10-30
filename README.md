@@ -55,13 +55,13 @@ There are no unresolved issues in regards to this code that I know of.
 
 ## Prerequisites
 To be able to run this command-line interface, you will need  to install the following:
-* python3.9
+* python3.8
 * pip
-* pyperclip
+
 * To run the application, in your terminal:
 
         $ chmod +x run.py
-        $ ./run.py
+        $ python3.8 run.py
 
 ## Technologies Used
 * [Python](https://github.com/topics/python)
